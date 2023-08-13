@@ -14,15 +14,15 @@ const VideoDetail = () => {
   const [commentText, setCommentText] = useState('');
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/api/video/${videoId}`).then((response) => {
+    axios.get(`https://final-project-goto-api.vercel.app/api/video/${videoId}`).then((response) => {
       setVideo(response.data);
     });
 
-    axios.get(`http://localhost:5000/api/video/${videoId}/comments`).then((response) => {
+    axios.get(`https://final-project-goto-api.vercel.app/api/video/${videoId}/comments`).then((response) => {
       setComments(response.data);
     });
 
-    axios.get(`http://localhost:5000/api/video/${videoId}/products`).then((response) => {
+    axios.get(`https://final-project-goto-api.vercel.app/api/video/${videoId}/products`).then((response) => {
       setProducts(response.data);
     });
   }, [videoId]);
@@ -35,10 +35,10 @@ const VideoDetail = () => {
 
     // API endpoint to submit comments
     axios
-      .post(`http://localhost:5000/api/video/${videoId}/comments`, newComment)
+      .post(`https://final-project-goto-api.vercel.app/api/video/${videoId}/comments`, newComment)
       .then(() => {
         // Refresh comments
-        axios.get(`http://localhost:5000/api/video/${videoId}/comments`).then((response) => {
+        axios.get(`https://final-project-goto-api.vercel.app/api/video/${videoId}/comments`).then((response) => {
           setComments(response.data);
           setCommentName('');
           setCommentText('');
@@ -131,7 +131,7 @@ const VideoDetail = () => {
 
     </div>
     <div className="footer">
-        <p>&copy; 2023 YourWebsite. All Rights Reserved.</p>
+        <p>&copy; 2023 Tokopedia Play. All Rights Reserved.</p>
       </div>
     </div>
   );
