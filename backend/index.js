@@ -9,7 +9,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-mongoose.connect(uri), {
+mongoose.connect('mongodb+srv://kevinari10:feVTiWZDj6hLEkqq@cluster0.mlwltiu.mongodb.net/tokoplay?retryWrites=true&w=majority'), {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 };
