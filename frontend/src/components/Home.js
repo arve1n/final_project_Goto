@@ -8,7 +8,7 @@ const Home = () => {
   const [videos, setVideos] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/videos').then((response) => {
+    axios.get('https://final-project-goto-api.vercel.app/api/videos').then((response) => {
       setVideos(response.data);
     });
   }, []);
