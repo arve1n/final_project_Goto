@@ -1,4 +1,4 @@
-# Video Sharing Platform API
+# Tokopedia Play API
 
 This repository contains the backend API for a video sharing platform. The API is built using Node.js, Express, and MongoDB. It provides endpoints for fetching videos, comments, and product information related to videos.
 
