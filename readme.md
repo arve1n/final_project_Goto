@@ -77,3 +77,43 @@ This repository contains the backend API for a video sharing platform. The API i
 - `cors`: Middleware for enabling CORS.
 - `dotenv`: Loading environment variables from a `.env` file.
 
+# Video Sharing Platform Database Schema
+
+This section provides an overview of the database schema used in the video sharing platform backend. The schema is designed to store information about videos, comments, and products associated with videos.
+
+## Entities and Fields
+
+### Video
+
+- `videoId` (String, Primary Key): Unique identifier for the video.
+- `title` (String): Title of the video.
+- `description` (String): Description of the video content.
+- `url` (String): URL of the video.
+- `createdAt` (Date): Timestamp of when the video was created.
+
+### Comment
+
+- `commentId` (String, Primary Key): Unique identifier for the comment.
+- `videoId` (String, Foreign Key): Reference to the video that the comment is associated with.
+- `name` (String): Name of the commenter.
+- `comment` (String): Content of the comment.
+- `createdAt` (Date): Timestamp of when the comment was created.
+
+### Product
+
+- `productId` (String, Primary Key): Unique identifier for the product.
+- `videoId` (String, Foreign Key): Reference to the video that the product is associated with.
+- `name` (String): Name of the product.
+- `price` (Number): Price of the product.
+- `createdAt` (Date): Timestamp of when the product was created.
+
+## Relationships
+
+- Each video can have multiple comments and products associated with it.
+- Each comment and product is related to a specific video through the `videoId` reference.
+
+## Schema Considerations
+
+- The schema is designed to efficiently store and retrieve information related to videos, comments, and products.
+- Proper indexing should be considered for fields used frequently for querying, such as `videoId` and `createdAt`.
+
