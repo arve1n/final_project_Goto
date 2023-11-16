@@ -18,7 +18,7 @@ const Home = () => {
     <div className="home-wrapper">
         <div className="header">
           <Link to="/" className="header-title">
-            Tokopedia Play
+            Gobby - Your Hobby On The Go
           </Link>
           <div className="header-icons">
             <FaSearch className="header-icon" />
@@ -42,7 +42,7 @@ const Home = () => {
       </div>
     </div>
     <div className="footer">
-        © 2023 Tokopedia-Play. All rights reserved.
+        © 2023 Gobby. All rights reserved.
       </div>
     </div>
   );
