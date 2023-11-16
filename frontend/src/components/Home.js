@@ -27,7 +27,7 @@ const Home = () => {
           </div>
       </div>
       <div className="home-container">
-      <h1 className="text-white">Video List</h1>
+      <h1 className="text-white">Your Interest</h1>
       <div className="video-list">
         {videos.slice(0, 5).map((video) => (
           <Link to={`/api/video/${video.videoId}`} className="video-card" key={video._id}>
