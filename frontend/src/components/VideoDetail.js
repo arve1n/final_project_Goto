@@ -54,7 +54,7 @@ const VideoDetail = () => {
     
       <div className="header">
         <Link to="/" className="header-title">
-          Tokopedia Play
+          Gobby - Your Hobby On The Go
         </Link>
         <div className="header-icons">
           <FaSearch className="header-icon" />
@@ -92,7 +92,7 @@ const VideoDetail = () => {
         />
       </div>
       <div className="section-container">
-        <h3>Comment List</h3>
+        <h3>Discussion</h3>
         <ul className="comment-list">
           {comments.map((c) => (
             <li key={c._id}>
@@ -131,7 +131,7 @@ const VideoDetail = () => {
 
     </div>
     <div className="footer">
-        <p>&copy; 2023 Tokopedia Play. All Rights Reserved.</p>
+        <p>&copy; 2023 Gobby. All Rights Reserved.</p>
       </div>
     </div>
   );
